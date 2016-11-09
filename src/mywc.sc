@@ -8,7 +8,7 @@ object scalastudy {
 }
 
 
-
+// 파셜 펑션 사용하기.
 val pf1: PartialFunction[Any,String] = {
   case s:String => if(s.equals("어쩌구")) "YES" else "NO"
 }
