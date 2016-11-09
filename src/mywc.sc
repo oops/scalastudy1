@@ -1,24 +1,23 @@
 object scalastudy {
-  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  println("Welcome to the Scala worksheet") //> Welcome to the Scala worksheet
 
-  1+1                                             //> res0: Int(2) = 2
-
+  1 + 1 //> res0: Int(2) = 2
 
 
 }
 
 
 // 파셜 펑션 사용하기.
-val pf1: PartialFunction[Any,String] = {
-  case s:String => if(s.equals("어쩌구")) "YES" else "NO"
+val pf1: PartialFunction[Any, String] = {
+  case s: String => if (s.equals("어쩌구")) "YES" else "NO"
 }
 
 printf("%s \n", pf1("오호"))
 printf("%s", pf1("어쩌구"))
 
 
-val pf2: PartialFunction[Any,String] = {
-  case s:String if s.equals("어쩌구") => "YES"
+val pf2: PartialFunction[Any, String] = {
+  case s: String if s.equals("어쩌구") => "YES"
   case _ => "NO"
 }
 
@@ -27,7 +26,7 @@ printf("%s", pf2("어쩌구"))
 
 case class Point(x: Double = 0.0, y: Double = 0.0) {
   def shift(dx: Double = 0.0, dy: Double = 0.0) = {
-    copy( x + dx , y + dy)
+    copy(x + dx, y + dy)
   }
 }
 

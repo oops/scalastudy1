@@ -3,16 +3,17 @@
   */
 object Futuretest {
   // src/main/scala/progscala2/typelessdomore/futures.sc
-  import scala.concurrent.Future
   import scala.concurrent.ExecutionContext.Implicits.global
+  import scala.concurrent.Future
 
   // 쓸모는 없는데 바쁜 일 ;)
-  def doWork(index: Int) : Int = {
+  def doWork(index: Int): Int = {
     val sl = math.random * 1000
     println(s"============Index $index  sleep: $sl")
     Thread.sleep(sl.toLong)
     index
   }
+
   def main(args: Array[String]): Unit = {
     (1 to 5) foreach { index =>
       val future = Future {

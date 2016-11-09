@@ -1,12 +1,12 @@
 // src/main/scala/progscala2/typelessdomore/futures.sc
 // 잘 안됨....   인텔리제이와 워크시트 문제
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 var a = 0
 
 // 쓸모는 없는데 바쁜 일 ;)
-def doWork(index: Int) : Int = {
+def doWork(index: Int): Int = {
   val sl = math.random * 1000
   a = a + 1
   println(s"============Index $index  sleep: $sl")
@@ -28,7 +28,7 @@ def doWork(index: Int) : Int = {
   }
 }
 
-Thread.sleep(20000)  // '작업' 이 끝날 때까지 충분히 기다린다.
+Thread.sleep(20000) // '작업' 이 끝날 때까지 충분히 기다린다.
 println(s"Finito! $a")
 
 
