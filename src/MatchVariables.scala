@@ -1,5 +1,3 @@
-import twitter4j.Query
-
 /**
   * Created by student on 2016-11-09.
   */
@@ -34,13 +32,4 @@ object MatchVariables {
     }
   }
 
-  import twitter4j.Twitter
-  def printTweet(twitter: Twitter, q: String): Unit = {
-    val result: QueryResult = twitter.search(new Query(q))
-    val tweets = result.getTweets
-    val it = tweets.iterator()
-    while (it.hasNext) {
-      println(it.next)
-    }
-  }
 }

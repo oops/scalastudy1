@@ -22,7 +22,7 @@ libraryDependencies ++= Seq(
   "junit"                   % "junit-dep"       % "4.10"   % "test",
   "com.novocode"            % "junit-interface" % "0.10"   % "test"
 )
-libraryDependencies += "org.twitter4j" % "twitter4j-stream" % "4.0.5"
+
 
 
 scalacOptions ++= Seq(
